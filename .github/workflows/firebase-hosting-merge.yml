@@ -17,6 +17,8 @@ jobs:
           node-version: '12.x'
       - run: npm install
       - run: 'npm run build:prod'
+      - run: 'mkdir -p ./dist/zazin-alis-wedding/.well-known'
+      - run: 'cp pd-kdvGi83_4RfwRtzqz34U6d0NX6C31fleaXAeeKJrQdTsRXJ8T5ryZnoRaIJAy ./dist/zazin-alis-wedding/.well-known/'
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
